@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+//unsure if any of this is truly correct
+
+package thingy;
+
+option go_package = ".;thingy";
+
+service ThingRequest {
+	rpc (ThingIn) returns (ThingOut);
+}
+
+message ThingIn {
+	string Field = 1 [json_name="field"];
+	string URL = 2 [json_name="url"];
+	int64 Number = 3 [json_name="number"];
+}
+
+message ThingOut {
+	string Field = 1 [json_name="field"];
+	string URL = 2 [json_name="url"];
+	int64 Number = 3 [json_name="number"];
+}
+
