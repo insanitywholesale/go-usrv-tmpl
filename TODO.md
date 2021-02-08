@@ -1,1 +1,2 @@
-- refactor the tests
+- add tests
+- rethink and reimplement api
