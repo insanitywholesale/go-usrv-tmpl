@@ -2,12 +2,12 @@ syntax = "proto3";
 
 //unsure if any of this is truly correct
 
-package thingy;
+package protos;
 
-option go_package = ".;thingy";
+option go_package = ".;protos";
 
 service ThingRequest {
-	rpc (ThingIn) returns (ThingOut);
+	rpc ProcessThing(ThingIn) returns (ThingOut);
 }
 
 message ThingIn {

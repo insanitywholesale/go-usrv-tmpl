@@ -1,11 +1,13 @@
 package grpc
 
 import (
+	"context"
+	"fmt"
 	"go-usrv-tmpl/domain"
-	"log"
+	"go-usrv-tmpl/protos"
 )
 
-func hey() {
-	smth := domain.NewThingService(nil)
-	log.Println("thingservice", smth)
+func (tr *ThingRequest) ProcessThing(ctx context.Context, ti *protos.ThingIn) (*protos.ThingOut, error) {
+	fmt.Print("ProcessThing not implemented")
+	return nil, nil
 }
